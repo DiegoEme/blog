@@ -36,6 +36,7 @@ const options = [
 const App = () => {
   const [selected, setSelected] = useState(options[0]);
   const [showDropdown, setShowDropdown] = useState(true);
+  console.log(selected);
 
   return (
     <div>
@@ -47,6 +48,7 @@ const App = () => {
           options={options}
         />
       ) : null}
+      <h1 style={{ color: `${selected.value}` }}>some text</h1>
     </div>
   );
 };
